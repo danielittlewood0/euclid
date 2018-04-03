@@ -1,0 +1,27 @@
+\documentclass[a5paper]{book}
+
+\usepackage{amsthm}
+\usepackage{tikz}
+\usetikzlibrary{calc,intersections,through,backgrounds}
+\renewcommand*\rmdefault{dayroms}
+\usepackage[T1]{fontenc}
+\makeatletter
+\renewcommand{\@chapapp}{Book}
+\makeatother
+\theoremstyle{plain}
+\newtheorem{prop}{Proposition}
+\renewcommand{\qedsymbol}{Q.E.D.}
+
+\definecolor{blue}{rgb}{0.13, 0.67, 0.8}
+\definecolor{yellow}{rgb}{1.0, 0.75, 0.0}
+\definecolor{red}{rgb}{0.92, 0.3, 0.26}
+
+\begin{document}
+	
+
+	\frontmatter
+	\chapter{Preface}
+	\mainmatter
+	\include{book_i}
+
+\end{document}
