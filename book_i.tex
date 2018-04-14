@@ -65,24 +65,24 @@
 		\centering\subsection*{PROPOSITIONS.}
 		\begin{prop}
 		
-			\begin{tikzpicture}[scale=1,opacity=0.8]
-			\coordinate (A) at (0,0);
-			\coordinate (B) at (1,0);
-			\draw[name path=C1,blue,ultra thick] (A) circle (1cm);
-			\draw[name path=C2,red,ultra thick] (B) circle (1cm);
-			\path [name intersections={of=C1 and C2}];
-			\coordinate (C) at (intersection-1);
-			
-			\draw[ultra thick] (A) -- (B); 
-			\draw[ultra thick,red] (B) -- (C);
-			\draw[ultra thick,yellow] (C) -- (A);
-			\end{tikzpicture}
-	
-			\begin{cutout}{1}{0.5\textwidth}{0pt}{2}
-			On a given finite straight line (\tikz[baseline=-0.5ex]\draw[ultra thick] (0,0) -- (1,0);) to describe an equlateral triangle.\\
 
-			text
-		\end{cutout}
+	
+%			\begin{cutout}{1}{0.5\textwidth}{0pt}{2}
+			On a given finite straight line (\tikz[baseline=-0.5ex]\draw[ultra thick] (0,0) -- (1,0);) to describe an equlateral triangle.\\
+			\begin{tikzpicture}[scale=1,opacity=0.8]
+\coordinate (A) at (0,0);
+\coordinate (B) at (1,0);
+\draw[name path=C1,blue,ultra thick] (A) circle (1cm);
+\draw[name path=C2,red,ultra thick] (B) circle (1cm);
+\path [name intersections={of=C1 and C2}];
+\coordinate (C) at (intersection-1);
+
+\draw[ultra thick] (A) -- (B); 
+\draw[ultra thick,red] (B) -- (C);
+\draw[ultra thick,yellow] (C) -- (A);
+\end{tikzpicture}
+%			text
+%		\end{cutout}
 	\end{prop}
 
 	
@@ -122,17 +122,7 @@
 		\end{align*}
 
 
-			\begin{prop}
-				% {3} = Cutout starts in row 3
-				% {0pt} = Cutout is flush left (0pt from left edge)
-				% {0.70\linewidth} = text covers 0.65\linewidth relative to right margin
-				% {8) = cutout extends 8 rows
-				hello
-				\begin{cutout}{2}{0pt}{0.70\linewidth}{6} 
-					
-			     \lipsum[1]
-				\end{cutout}
-			\end{prop}
+
 		
 	\end{proof}
 	
