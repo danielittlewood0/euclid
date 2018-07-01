@@ -1,0 +1,13 @@
+	\pagestyle{euclidprob}
+	\begin{prop}
+		\lettrine[lines=3]{F}rom the greater of two straight lines (\begin{tikzpicture} 
+			\draw[ultra thick] (0,0) -- (0.5cm,0);
+			\draw[densely dashed,ultra thick] (0.5cm,0) -- (1cm,0);
+		\end{tikzpicture}
+			), to cut a part off equal to the less (\tikzhline[blue]{1cm})
+
+	\end{prop}
+	\begin{proof}
+		Draw $\tikzhline[red]{1cm} = \tikzhline[blue]{1cm}$ (\refprop{2})
+
+	\end{proof}

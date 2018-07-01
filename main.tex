@@ -1,4 +1,9 @@
-\documentclass[a5paper]{book}
+\documentclass[a5paper]{memoir}
+\usepackage[hidelinks]{hyperref}
+\usepackage{memhfixc}
+%\makeatletter
+%\newcommand*{\currentname}{\@currentlabelname}
+%\makeatother
 
 \usepackage[calc]{adjustbox}
 \usepackage{lipsum}
@@ -13,7 +18,27 @@
 \renewcommand*\rmdefault{dayroms}
 \usepackage[T1]{fontenc}
 \usepackage{titlesec}
-\usepackage{lua-visual-debug}
+%\usepackage{lua-visual-debug}
+\setcounter{tocdepth}{3}
+\usepackage{lettrine}
+%%%%%%%%
+\makepagestyle{euclidbasic}
+\makeevenhead{euclidbasic}{\thepage}{BOOK \thechapter. \nameref{section\thesection}.}{}
+\makeoddhead{euclidbasic}{}{BOOK \thechapter. \nameref{section\thesection}.}{\thepage}
+
+\makepagestyle{euclidprob}
+\makeevenhead{euclidprob}{\thepage}{BOOK \thechapter. PROP. \theprop. PROB.}{}
+\makeoddhead{euclidprob}{\thepage}{BOOK \thechapter. PROP. \theprop. PROB.}{}
+
+\makepagestyle{euclidthm}
+\makeevenhead{euclidthm}{\thepage}{BOOK \thechapter. PROP. \theprop. THEOR.}{}
+\makeoddhead{euclidthm}{\thepage}{BOOK \thechapter. PROP. \theprop. THEOR.}{}
+
+\makepagestyle{euclidintro}
+\makeevenhead{euclidintro}{}{INTRODUCTION.}{\thepage}
+\makeoddhead{euclidintro}{\thepage}{INTRODUCTION.}{}
+
+%%%%%%%%
 
 \titleformat{\chapter}
 {\centering\normalfont}{Book~\thechapter}{1em}{}
@@ -22,10 +47,9 @@
 \titleformat{\subsection}
 {\centering\normalfont}{}{1em}{}
 \renewcommand{\subsection}[1]{%
-  \par\refstepcounter{section}% Increase section counter
+  \par\refstepcounter{subsection}% Increase section counter
   \sectionmark{#1}% Add section mark (header)
-  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}% Add section to ToC
-  % Add more content here, if needed.
+  \addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}#1}% Add section to ToC
 }
 \theoremstyle{plain}
 \newtheorem{prop}{Proposition}
@@ -54,11 +78,15 @@
 }
 \newcommand{\refprop}[1]{pr. \ref{prop#1}.}
 \begin{document}
-	
-
+	%\pagestyle{empty}
+	\pagestyle{euclidintro}
 	\frontmatter
 	\tableofcontents
 	\chapter{INTRODUCTION.}
+	\lettrine[lines=4]{T}{HE arts and sciences have} become so extensive, that to facilitate their acquirement is of as much importance as to extend their boundaries. Illustration, if it does not shorten the time of study, will at least make it more agreeable. \textsc{This work} has a greater aim than mere illustration; we do not introduce colours for the purpose of entertainment, or to amuse \textit{by certain combinations of tint and form}, but to assist the mind in its researches after truth, to increase the facilities of instruction, and to diffuse permanent knowledge. If we wanted authorities to prove the importance and usefulness of geometry, we might quote every philosopher since the days of Plato. Among the Greeks, in ancient, as in the school of Pestalozzi and others in recent times, geometry was adopted as the best gymnastic of the mind. In fact, Euclid's Elements have become, by common consent, the basis of mathematical science all over the civilized globe. But this will not appear extraordinary, if we consider that this sublime science is not only better calculated than any other to call forth the spirit of inquity, to elevate the mind, and to strengthen the reasoning faculties, but also it forms the best introduction to most of the useful and important vocations of human life. Arithmetic, land-surveying, menfuration, enginerring, navigation, mechanics, hydrostatics, pneumatics, optics, physical astronomy, \&c. are all dependent on the propositions of geometry. 
+
+	Much however depends on the first communication of any science to a learner, though the best and most easy methods are seldom adopted. Propositions are placed before a student, who though having a sufficient understanding, if told just as much about them on entering at the very threshold of the science, as gives gives him a prepossession most unfavourable to his future study of this delightful subject; or ``the formalitites and paraphernalia of rigour are so ostentatiously put forward, as almost to hide the reality. Endless and perplexing repetitions, whih so not confer gfrater exactitude on the reasoning, render the demonstrations involved and obscure, and conceal from the view of the student the consecution of evidenve.'' Thus and aversion is created in the mind of the pupil, and a subject so calculated to improve the ewasoning powers, and give the chabir of close thinking, is degraded by a fry and rigid memory, To eaise the curiosuity, and to awaken the listless and dormant powers of younger mindds should be the aim of every reacher; but where examples of excellence are wanting, the attempts to attain it are but few, while eminence exciteds attention and produces imitarion, The object ofthis Work is to introduce a method of teaching geometry, which has been much approveed of by many scientific men in this country, as well as in France and America. The plan here adopted forciblu appeals to the eye, the most sensitive and the most comprehensive of our external organs, and its pre-eminence to imprint it subject on the mind is supported by the incontrovertible maxim sexpressed in the well known words of Horace:-
+	
 	\mainmatter
 	\input{./book_i/book_i.tex}
 

@@ -3,9 +3,12 @@
 		\let\clearpage\relax% Don't allow page break
 		{\hspace{48pt}\centering THE ELEMENTS OF EUCLID}%sorry
 		
-		\chapter{BOOK I.}
+		\chapter{BOOK 1.}\label{book1}
 		}
-		{\centering\section{DEFINITIONS.}}
+		\pagestyle{euclidbasic}
+		{\centering\section{DEFINITIONS.}
+		\label{section\thesection}
+		}
 		\begin{bizarrelist}
 			\item A \textit{point} is that which has no parts.\label{def1}
 			\item A \textit{line} is length without breadth.\label{def2}
@@ -43,14 +46,16 @@
 			\item All other quadrilateral figures are called trapeziums.                           \label{def34}
 			\item Parallel straight lines are such as are in the same plane, and which being produced continually in both directions, would never meet.                            \label{def35}
 		\end{bizarrelist}
-		{\centering\section{POSTULATES.}}
+		{\centering\section{POSTULATES.}
+		\label{section\thesection}}
 		\begin{bizarrelist}
 			\item Let it be granted that a straight line may be drawn from any one point to any other point.\label{post1}
 			\item Let it be granted that a finite straight line may be produced to any length in a straight line. \label{post2}
 			\item Let it be granted that a circle may be described with any centre at any distance from that centre.  \label{post3}
 		\end{bizarrelist}
 		
-		{\centering\section{AXIOMS.}}
+		{\centering\section{AXIOMS.}
+		\label{section\thesection}}
 		\begin{bizarrelist}
 			\item Magnitudes which are equal to the same are equal to each other. \label{ax1}
 			\item If equals be added to equals the sums will be equal.  \label{ax2}
@@ -70,7 +75,8 @@
 				\end{tikzpicture}) 
 				meet at a third straight line (\tikzhline{1cm}) so as to make the two interior angles (\tikzsector[yellow]{0}{-90}{1cm} and \tikzsector[blue]{0}{90}{1cm}) on the same side less than two right angles, these two straight lines will meet if they be produced on that side on which the angles are less than two right angles. \label{ax12}
 		\end{bizarrelist}
-		{\centering\section{ELUCIDATIONS.}}
+		{\centering\section{ELUCIDATIONS.}
+		\label{section\thesection}}
 		The twelfth axiom may be expressed in any of the following ways: 
 		\begin{enumerate}[itemsep=0pt]
 			\item Two diverging straight lines cannot be both parallel to the same straight line. 
@@ -86,12 +92,19 @@
 
 
 		\newpage
-		{\centering\section{\textit{Faults to be corrected before reading this Volume.}}}
+		{\centering\section[CORRIGENDA.]{\textit{Faults to be corrected before reading this Volume.}}
+		\label{section\thesection}}
 		\clearpage
-		{\centering\section{PROPOSITIONS.}}
+		{\centering\section{PROPOSITIONS.}
+		\label{section\thesection}}
+
+
 		\subsection{Proposition \the\numexpr \theprop + 1}
 		\input{./book_i/prop_i.tex}
+		\clearpage
 		\subsection{Proposition \the\numexpr \theprop + 1}
 		\input{./book_i/prop_ii.tex}
+		\clearpage
 		\subsection{Proposition \the\numexpr \theprop + 1}
 		\input{./book_i/prop_iii.tex}
+		\clearpage
