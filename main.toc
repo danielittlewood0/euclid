@@ -1,0 +1,11 @@
+\contentsline {chapter}{INTRODUCTION.}{iii}
+\contentsline {chapter}{\numberline {1}BOOK I.}{1}
+\contentsline {section}{\numberline {1.1}DEFINITIONS.}{1}
+\contentsline {section}{\numberline {1.2}POSTULATES.}{5}
+\contentsline {section}{\numberline {1.3}AXIOMS.}{6}
+\contentsline {section}{\numberline {1.4}ELUCIDATIONS.}{7}
+\contentsline {section}{\numberline {1.5}\textit {Faults to be corrected before reading this Volume.}}{9}
+\contentsline {section}{\numberline {1.6}PROPOSITIONS.}{10}
+\contentsline {section}{\numberline {1.7}Proposition 1}{10}
+\contentsline {section}{\numberline {1.8}Proposition 2}{10}
+\contentsline {section}{\numberline {1.9}Proposition 3}{11}

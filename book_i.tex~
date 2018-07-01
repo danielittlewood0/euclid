@@ -1,6 +1,6 @@
 
 		\chapter{}
-		\centering\subsection*{DEFINITIONS.}
+		{\centering\subsection*{DEFINITIONS.}}
 		\begin{enumerate}[I]
 			\item A \textit{point} is that which has no parts.
 			\item A \textit{line} is length without breadth.
@@ -38,14 +38,14 @@
 			\item All other quadrilateral figures are called trapeziums.
 			\item Parallel straight lines are such as are in the same plane, and which being produced continually in both directions, would never meet. 
 		\end{enumerate}
-		\centering\subsection*{POSTULATES.}
+		{\centering\subsection*{POSTULATES.}}
 		\begin{enumerate}[I]
 			\item Let it be granted that a straight line may be drawn from any one point to any other point.
 			\item Let it be granted that a finite straight line may be produced to any length in a straight line. 
 			\item Let it be granted that a circle may be described with any centre at any distance from that centre. 
 		\end{enumerate}
 		
-		\centering\subsection*{AXIOMS.}
+		{\centering\subsection*{AXIOMS.}}
 		\begin{enumerate}[I]
 		\item Magnitudes which are equal to the same are equal to each other. 
 		\item If equals be added to equals the sums will be equal. 
@@ -58,11 +58,27 @@
 		\item The whole is greater than its part. 
 		\item Two straight lines cannot include a space. 
 		\item All right angles are equal. 
-		\item If two straight lines () meet at a third straight lines () so as to make the two interior angles ( and ) on the same side less than two right angles, these two straight lines will meet if they be produced on that side on which the angles are less than two right angles. 
+		\item{enumerate}If two straight lines () meet at a third straight lines () so as to make the two interior angles ( and ) on the same side less than two right angles, these two straight lines will meet if they be produced on that side on which the angles are less than two right angles. 
 		\end{enumerate}
-		\centering\subsection*{ELUCIDATIONS.}
+		{\centering\subsection*{ELUCIDATIONS.}}
+		The twelfth axiom may be expressed in any of the following ways: 
+		\begin{enumerate}[itemsep=0pt]
+			\item Two diverging straight lines cannot be both parallel to the same straight line. 
+			\item If a straight line intersect one of the two parallel straight lines it must also intersect the other. 
+			\item Only one straight line can be drawn through a given point, parallel to a given straight line. 
+		\end{enumerate} 
+
+		Geometry has for its principal object the exposition and explanation of the properties of \textit{figure}, and figure is defined to be the relation which subsists between the boundaries of space. Space or magnitude is of three kinds, \textit{linear}, \textit{superficial}, and \textit{solid}. 
+
+		Angles might properly be considered as a fourth species of magnitude. Angular magnitude evidently consists of parts, and must therefore be admitted to be a species of quantity. The student must not suppose that the magnitude of an angle is affected by the length of the straight lines which include int, and of whose mutual divergence it is the measure. The \textit{vertex} of an angle is the point where the \textit{sides} or the \textit{legs} of the angle meet, as A. 
+
+		An angle is often designated by a single letter when its legs are the only lines which meet together at its vertex. Thus the red and blue lines form the yellow angle, which in other systems would be called the angle A. But when more than two lines meet in the same point, it was necessary by former methods, in order to avoid confusion, to emplot three letters to designate an angle about that point, the letter which marked the vertex of the angle being always placed in the middle. thus the black and red lines meeting together at C, form the blue angle, and has been usually denominated the angle FCD or DCF. The lines FC and DC are the legs of the angle; the point C is its vertex. In like manner the black angle would be designated the angle DCB or BCD. The red and blue angles added together, or the angle HCF added to FCD, make the angle HCD; and so of other angles. 
+
+
 		\newpage
-		\centering\subsection*{PROPOSITIONS.}
+		{\centering\subsection*{\textit{Faults to be corrected before reading this Volume.}}}
+
+		{\centering\subsection*{PROPOSITIONS.}}
 		\begin{prop}
 		
 

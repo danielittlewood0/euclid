@@ -12,9 +12,11 @@
 \usetikzlibrary{calc,intersections,through,backgrounds}
 \renewcommand*\rmdefault{dayroms}
 \usepackage[T1]{fontenc}
+%\makeatletter
+%\renewcommand{\@chapapp}{Book}
+%\makeatother
 \usepackage{titlesec}
 \usepackage{lua-visual-debug}
-
 \titleformat{\chapter}
 {\centering\normalfont}{Book~\thechapter}{1em}{}
 \titleformat{\section}
