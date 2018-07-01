@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.15)  1 JUL 2018 16:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.15)  1 JUL 2018 16:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -573,20 +573,20 @@ is is not supported, so you don't get any visual debugging. on input line 32.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
 LaTeX Font Info:    Try loading font information for T1+dayroms on input line 5
-8.
+6.
  (/usr/local/share/texmf/tex/latex/dayroman/t1dayroms.fd
 File: t1dayroms.fd 2003/01/16 Fontinst v1.914 font definitions for T1/dayroms.
 )
@@ -676,7 +676,7 @@ LaTeX Font Warning: Font shape `T1/dayroms/m/it' undefined
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
 LaTeX Font Warning: Font shape `T1/dayroms/m/sl' undefined
-(Font)              using `T1/dayroms/m/n' instead on input line 63.
+(Font)              using `T1/dayroms/m/n' instead on input line 61.
 
 [2
 
@@ -740,7 +740,7 @@ Here is how much of TeX's memory you used:
 share/texmf/fonts/type1/public/dayroman/DAYROM__.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (15 pages, 53744 bytes).
+Output written on main.pdf (15 pages, 53758 bytes).
 PDF statistics:
  72 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
