@@ -1,3 +1,7 @@
 *.sw*
 *.un*
 *~
+*.pdf
+*.log
+*.out
+*.aux
