@@ -1,18 +1,17 @@
 \pagestyle{euclidprob}
 %        \begin{wrapfigure}[3]{r}[0.2\textwidth]{0.6\textwidth}
     \begin{figure}
-\begin{tikzpicture}[scale=1.2,opacity=0.8]
-\coordinate (A) at (0,0);
-\coordinate (B) at (1,0);
-\draw[name path=C1,blue,ultra thick] (A) circle (1cm);
-\draw[name path=C2,red,ultra thick] (B) circle (1cm);
-\path [name intersections={of=C1 and C2}];
-\coordinate (C) at (intersection-1);
-
-\draw[ultra thick] (A) -- (B); 
-\draw[ultra thick,red] (B) -- (C);
-\draw[ultra thick,yellow] (C) -- (A);
-\end{tikzpicture}
+        \begin{tikzpicture}[scale=1.2]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (1,0);
+        \draw[name path=C1,blue,ultra thick] (A) circle (1cm);
+        \draw[name path=C2,red,ultra thick] (B) circle (1cm);
+        \path [name intersections={of=C1 and C2}];
+        \coordinate (C) at (intersection-1);
+    \renewcommand{\len}{0.55pt}
+        \tikztriangle[black][red][yellow]{(A)}{(B)}{(C)}
+    \renewcommand{\len}{0.8pt}
+        \end{tikzpicture}
     \end{figure}
 %        \end{wrapfigure}
     \begin{prop}{\lettrine[lines=2]{\textrm{O}}{\textsc{n}}}
@@ -24,14 +23,14 @@
 
 \begin{proof}
 Describe 
-\begin{tikzpicture}[scale=0.5,opacity=0.8,baseline=-0.5ex]
+\begin{tikzpicture}[scale=0.5,baseline=-0.5ex]
 \coordinate (A) at (0,0);
 \coordinate (B) at (1,0);
 \draw[name path=C1,blue,ultra thick] (A) circle (1cm);
 \draw[ultra thick] (A) -- (B); 
 \end{tikzpicture}
     and 
-\begin{tikzpicture}[scale=0.5,opacity=0.8,baseline=-0.5ex]
+\begin{tikzpicture}[scale=0.5,baseline=-0.5ex]
 \coordinate (A) at (0,0);
 \coordinate (B) at (1,0);
 \draw[name path=C2,red,ultra thick] (B) circle (1cm);
@@ -41,7 +40,7 @@ Describe
   \tikzhline[yellow]{0.8cm} and
   \tikzhline[red]{0.8cm}
   (\refpost{1}). then will 
-  \begin{tikzpicture}[baseline=-0.5ex,scale=0.5,opacity=0.8]
+  \begin{tikzpicture}[scale=0.5,baseline=-0.5ex]
   \coordinate (A) at (0,0);
   \clip (-0.1,-0.1) rectangle (1.1,1.1);
   \coordinate (B) at (1,0);
@@ -49,14 +48,20 @@ Describe
   \path[name path=C2,red,ultra thick] (B) circle (1cm);
   \path [name intersections={of=C1 and C2}];
   \coordinate (C) at (intersection-1);
-  \draw[ultra thick] (A) -- (B); 
-  \draw[ultra thick,red] (B) -- (C);
-  \draw[ultra thick,yellow] (C) -- (A);
+    \renewcommand{\len}{1.6pt}
+      \tikztriangle[black][red][yellow]{(A)}{(B)}{(C)}
+    \renewcommand{\len}{0.8pt}
   \end{tikzpicture}
 be equilateral. 
 \begin{align*}
-            \text{For }  \tikz[baseline=-0.5ex]\draw[black,ultra thick] (0,0) -- (1,0); &\equals \tikz[baseline=-0.5ex]\draw[yellow,ultra thick] (0,0) -- (1,0);  \text{ (\refdef{15})}\\
-            \text{and  }\tikz[baseline=-0.5ex]\draw[black,ultra thick] (0,0) -- (1,0); &\equals \tikz[baseline=-0.5ex]\draw[red,ultra thick] (0,0) -- (1,0); \text{ (\refdef{15})} \\
-            \therefore \tikz[baseline=-0.5ex]\draw[yellow,ultra thick] (0,0) -- (1,0); &\equals \tikz[baseline=-0.5ex]\draw[red,ultra thick] (0,0) -- (1,0); \text{ (\refax{1})} 
+            \text{For }  \tikz[baseline=-0.5ex]\draw[black,ultra thick] (0,0) -- (1,0); 
+            &\equals \tikz[baseline=-0.5ex]\draw[yellow,ultra thick] (0,0) -- (1,0);  
+            \text{ (\refdef{15})}\\
+            \text{and  }\tikz[baseline=-0.5ex]\draw[black,ultra thick] (0,0) -- (1,0); 
+            &\equals \tikz[baseline=-0.5ex]\draw[red,ultra thick] (0,0) -- (1,0); 
+            \text{ (\refdef{15})} \\
+            \therefore \tikz[baseline=-0.5ex]\draw[yellow,ultra thick] (0,0) -- (1,0); 
+            &\equals \tikz[baseline=-0.5ex]\draw[red,ultra thick] (0,0) -- (1,0); 
+            \text{ (\refax{1})} 
 \end{align*}
 \end{proof}

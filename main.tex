@@ -72,12 +72,17 @@
 \definecolor{blue}{rgb}{0.13, 0.67, 0.8}
 \definecolor{yellow}{rgb}{1.0, 0.75, 0.0}
 \definecolor{red}{rgb}{0.92, 0.3, 0.26}
-
+\usepackage{corners}
 \newcommand{\tikzhline}[2][black]{ 
 \tikz[baseline=-0.5ex]\draw[ultra thick,#1] (0,0) -- (#2,0);
 }
 \newcommand{\tikzsector}[4][black]{ 
 \tikz[minimum height=2em,scale=0.4]\fill[#1] (0,0) -- (#2:#4) arc (#2:#3:#4) -- cycle;
+}
+\DeclareDocumentCommand{\tikztriangle}{O{black} O{black} O{black} m m m}{
+    \tikzcorner[#1][#2]{#4}{#5}{#6}
+    \tikzcorner[#2][#3]{#5}{#6}{#4}
+    \tikzcorner[#3][#1]{#6}{#4}{#5}
 }
 \newcommand{\refprop}[1]{pr. \ref{prop#1}.}
 \newcommand{\refdef}[1]{def. \ref{def#1}.}
