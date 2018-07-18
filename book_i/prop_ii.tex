@@ -1,6 +1,24 @@
 	\pagestyle{euclidprob}
+    \begin{figure}[h]
+        \begin{tikzpicture}
+        \coordinate (A) at (0,0);
+            \coordinate (B) at (-70:1cm);
+            \coordinate (C) at (-10:1cm);
+            \draw[ultra thick,yellow] (B) --++ (-70:2cm);
+            \draw[red,ultra thick] (B) -- (A) -- (C);
+            \draw[ultra thick] (B) --++ (180:2cm);
+            \draw[densely dashed,ultra thick] (B) -- (C);
+            \draw[blue,ultra thick] (C) --++ (-10:2.05cm);
+            \draw[blue,ultra thick] (B) circle (2cm);
+            \draw[red,ultra thick] (A) circle (3.05cm);
+        \end{tikzpicture}
+    \end{figure}
     \begin{prop}{\lettrine[lines=2]{F}rom}
-	a given point (\begin{tikzpicture} [baseline=-0.5ex] \draw[red,ultra thick] (0,0) -- (0.6cm,0); \draw[blue,ultra thick] (0.6cm,0) -- (1cm,0);\end{tikzpicture}), 
+	a given point 
+        (\begin{tikzpicture} [baseline=-0.5ex] 
+        \draw[red,ultra thick] (0,0) -- (0.6cm,0); 
+        \draw[blue,ultra thick] (0.6cm,0) -- (1cm,0);
+        \end{tikzpicture}), 
 			to draw a straight line equal to a given finite straight line (\tikzhline[black]{1cm}).\par % (\hline[black])	
 	\end{prop}
 	\begin{proof}
