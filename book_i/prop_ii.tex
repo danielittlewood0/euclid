@@ -1,32 +1,31 @@
 	\pagestyle{euclidprob}
-	\begin{prop}
-		\label{prop2}
-		\lettrine[lines=4]{F}rom a given point (\begin{tikzpicture} [baseline=-0.5ex] \draw[red,ultra thick] (0,0) -- (0.6cm,0); \draw[blue,ultra thick] (0.6cm,0) -- (1cm,0);\end{tikzpicture}), 
-			to draw a straight line equal to a given finite straight line (\tikzhline[black]{1cm}). % (\hline[black])	
+    \begin{prop}{\lettrine[lines=2]{F}rom}
+	a given point (\begin{tikzpicture} [baseline=-0.5ex] \draw[red,ultra thick] (0,0) -- (0.6cm,0); \draw[blue,ultra thick] (0.6cm,0) -- (1cm,0);\end{tikzpicture}), 
+			to draw a straight line equal to a given finite straight line (\tikzhline[black]{1cm}).\par % (\hline[black])	
 	\end{prop}
 	\begin{proof}
-		Draw \tikzhline[densely dashed]{1cm} (\ref{post1}), describe 
+        Draw \tikzhline[densely dashed]{1cm} (\refpost{1}), describe 
 		\begin{tikzpicture}[scale=0.45,baseline=0.5ex]
 			\draw[ultra thick,red] (0,0) -- (60:1) -- (1,0);
 			\draw[ultra thick,densely dashed] (1,0) -- (0,0);
 		\end{tikzpicture}
-		(pr. 1.), produce \tikzhline[red]{0.7cm} (\ref{post2}), describe 
+        (\refprop{1}), produce \tikzhline[red]{0.7cm} (\refpost{2}), describe 
 		\begin{tikzpicture}[scale=0.4,baseline=-0.5ex]
 			\draw[ultra thick] (0,0) -- (-1,0);
 			\draw[blue,ultra thick] (0,0) circle (1cm);
 		\end{tikzpicture}
-		(\ref{post3}), and 
+        (\refpost{3}), and 
 		\begin{tikzpicture}[scale=0.4,baseline=-0.5ex]
 			\draw[ultra thick,red] (0,0) -- (-60:0.4);
 			\draw[ultra thick,yellow] (-60:0.4) -- (-60:1);
 			\draw[ultra thick,red] (0,0) circle (1cm);
 		\end{tikzpicture}
 
-		(\ref{post3}); produce \tikzhline[red]{1cm} (\ref{post2}), then \tikzhline[blue]{1cm} is the line required. 
-		For $\begin{tikzpicture} [baseline=-0.5ex] \draw[yellow,ultra thick] (0,0) -- (0.6cm,0); \draw[red,ultra thick] (0.6cm,0) -- (1cm,0);\end{tikzpicture} = 
+        (\refpost{3}); produce \tikzhline[red]{1cm} (\refpost{2}), then \tikzhline[blue]{1cm} is the line required. 
+		For $\begin{tikzpicture} [baseline=-0.5ex] \draw[yellow,ultra thick] (0,0) -- (0.6cm,0); \draw[red,ultra thick] (0.6cm,0) -- (1cm,0);\end{tikzpicture} \equals 
 			\begin{tikzpicture} [baseline=-0.5ex] \draw[red,ultra thick] (0,0) -- (0.4cm,0); \draw[blue,ultra thick] (0.4cm,0) -- (1cm,0);\end{tikzpicture}$
-				(\ref{def15}), and $\tikzhline[red]{0.7cm} = \tikzhline[red]{0.7cm}$ (const.),
-		$\therefore \tikzhline[yellow]{1cm} = \tikzhline[blue]{1cm}$ (\ref{ax3}), but (\ref{def15}) $\tikzhline[black]{1cm} = \tikzhline[yellow]{1cm} = \tikzhline[blue]{1cm}$;
+                (\refdef{15}), and $\tikzhline[red]{0.7cm} \equals \tikzhline[red]{0.7cm}$ (const.),
+        $\therefore \tikzhline[yellow]{1cm} \equals \tikzhline[blue]{1cm}$ (\refax{3}), but (\refdef{15}) $\tikzhline[black]{1cm} \equals \tikzhline[yellow]{1cm} \equals \tikzhline[blue]{1cm}$;
 		$\therefore \tikzhline[blue]{1cm}$ drawn from the given point 
 		(\begin{tikzpicture} [baseline=-0.5ex] \draw[red,ultra thick] (0,0) -- (0.4cm,0); \draw[blue,ultra thick] (0.4cm,0) -- (1cm,0);\end{tikzpicture}), 
 			is equal the given line \tikzhline{1cm}.
