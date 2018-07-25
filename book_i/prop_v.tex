@@ -1,33 +1,143 @@
-	\pagestyle{euclidprob}
+	\pagestyle{euclidthm}
     \begin{figure}[h]
         \begin{tikzpicture}[scale=0.8]
-            \draw[ultra thick,blue] (0,0) circle (3cm);
-            \draw[ultra thick,black] (0,0) -- (3,0);
-            \draw[ultra thick,red] (0,0) -- (45:3cm);
-            \draw[ultra thick,densely dashed] (3,0) -- (4,0);
-            \draw[ultra thick,blue] (3.5,-0.5) -- (3.5,-3.5);
+            \node (A) at (0,5)    {A};
+            \node (B) at (-3.5,-2){B};
+            \node (C) at (3.5,-2) {C};
+            \path (A) -- (B) node[pos=0.6] (D) {D};
+            \path (A) -- (C) node[pos=0.6] (E) {E};
+            \tikzsectorabc[fill=black]{(B)}{(A)}{(C)}{1cm}
+            \tikzsectorabc[fill=blue]{(E)}{(D)}{(A)}{1cm}
+            \tikzsectorabc[fill=blue]{(A)}{(E)}{(D)}{1cm}
+            \tikzsectorabc[fill=yellow]{(C)}{(D)}{(E)}{1cm}
+            \tikzsectorabc[fill=yellow]{(D)}{(E)}{(B)}{1cm}
+            \tikzsectorabc[fill=red]{(E)}{(B)}{(A)}{1cm}
+            \tikzsectorabc[fill=red]{(A)}{(C)}{(D)}{1cm}
+            \tikztriangle[yellow][blue][red]{(A)}{(B)}{(E)}
+            \tikztriangle[yellow][blue][red]{(A)}{(C)}{(D)}
+            \tikztriangle[red][black][red]{(A)}{(D)}{(E)}
         \end{tikzpicture}
     \end{figure}
+    \newcommand{\ADE}{
+        \begin{tikzpicture}[scale=0.1]
+            \clip (-3.0,-0.2) rectangle (3,5.2);
+            \node[coordinate] (A) at (0,5)    {A};
+            \node[coordinate] (B) at (-3.5,-2){B};
+            \node[coordinate] (C) at (3.5,-2) {C};
+            \path (A) -- (B) node[pos=0.6,coordinate] (D) {D};
+            \path (A) -- (C) node[pos=0.6,coordinate] (E) {E};
+            \tikztriangle[red][black][red]{(A)}{(D)}{(E)}
+        \end{tikzpicture}
+    }
+    \newcommand{\ABE}{
+        \begin{tikzpicture}[scale=0.3]
+            \node (A) at (0,5)    {A};
+            \node (B) at (-3.5,-2){B};
+            \node (C) at (3.5,-2) {C};
+            \path (A) -- (B) node[pos=0.6] (D) {D};
+            \path (A) -- (C) node[pos=0.6] (E) {E};
+            \tikzsectorabc[fill=black]{(B)}{(A)}{(C)}{0.3cm}
+            \tikztriangle[yellow][blue][red]{(A)}{(B)}{(E)}
+            \tikztriangle[yellow][blue][red]{(A)}{(C)}{(D)}
+        \end{tikzpicture}
+    }
+    \newcommand{\ACD}{
+        \begin{tikzpicture}[scale=0.3]
+            \node (A) at (0,5)    {A};
+            \node (B) at (-3.5,-2){B};
+            \node (C) at (3.5,-2) {C};
+            \path (A) -- (B) node[pos=0.6] (D) {D};
+            \path (A) -- (C) node[pos=0.6] (E) {E};
+            \tikzsectorabc[fill=black]{(B)}{(A)}{(C)}{0.3cm}
+            \tikztriangle[yellow][blue][red]{(A)}{(B)}{(E)}
+            \tikztriangle[yellow][blue][red]{(A)}{(C)}{(D)}
+        \end{tikzpicture}
+    }
+    \newcommand{\DEB}{
+        \begin{tikzpicture}[scale=0.3]
+            \node (A) at (0,5)    {A};
+            \node (B) at (-3.5,-2){B};
+            \node (C) at (3.5,-2) {C};
+            \path (A) -- (B) node[pos=0.6] (D) {D};
+            \path (A) -- (C) node[pos=0.6] (E) {E};
+            \tikztriangle[yellow][blue][red]{(D)}{(E)}{(B)}
+        \end{tikzpicture}
+    }
+    \newcommand{\EDC}{
+        \begin{tikzpicture}[scale=0.3]
+            \node (A) at (0,5)    {A};
+            \node (B) at (-3.5,-2){B};
+            \node (C) at (3.5,-2) {C};
+            \path (A) -- (B) node[pos=0.6] (D) {D};
+            \path (A) -- (C) node[pos=0.6] (E) {E};
+            \tikztriangle[yellow][blue][red]{(E)}{(D)}{(C)}
+        \end{tikzpicture}
+    }
+    \newcommand{\bac}{
+        bac
+    }
+    \newcommand{\abe}{
+        abe
+    }
+    \newcommand{\acd}{
+        acd
+    }
+    \newcommand{\adc}{
+        adc
+    }
+    \newcommand{\ade}{
+        ade
+    }
+    \newcommand{\aeb}{
+        aeb
+    }
+    \newcommand{\aed}{
+        aed
+    }
+    \newcommand{\deb}{
+        deb
+    }
+    \newcommand{\dec}{
+        dec
+    }
+    \newcommand{\edb}{
+        edb
+    }
+    \newcommand{\edc}{
+        edc
+    }
+    \renewcommand{\ab}{
+        ab
+    }
+    \renewcommand{\ac}{
+        ac
+    }
+    \newcommand{\ad}{
+        ad
+    }
+    \renewcommand{\ae}{
+        ae
+    }
+    \newcommand{\db}{
+        db
+    }
+    \newcommand{\dc}{
+        dc
+    }
+    \newcommand{\eb}{
+        eb
+    }
+    \newcommand{\ec}{
+        ec
+    }
 
-    \begin{prop}{\lettrine[lines=2]{F}rom}
-		the greater (\begin{tikzpicture} 
-			\draw[ultra thick] (0,0) -- (0.9cm,0);
-			\draw[densely dashed,ultra thick] (0.9cm,0) -- (1.5cm,0);
-		\end{tikzpicture}
-			) of two straight lines , to cut a part off equal to the less (\tikzhline[blue]{0.9cm}).\par
+    
 
+    \begin{prop}{\lettrine[lines=2]{I}n}
+        any isosceles triangle \ADE if the equal sides be produced, the external angles at the base are equal, and the internal angles at the base are also equal. 
 	\end{prop}
 	\begin{proof}
-		Draw $\tikzhline[red]{1cm} = \tikzhline[blue]{1cm}$ (\refprop{2}); 
-        describe 
-        \begin{tikzpicture}[scale=0.5]
-            \draw[ultra thick,red] (0,0) -- (45:1.15cm);
-            \draw[ultra thick,blue] (0,0) circle (1cm);
-        \end{tikzpicture}
-        (\refpost{3}), then $\tikzhline[blue]{0.9cm} \equals \tikzhline[black]{0.9cm}.$
-        \begin{align*}
-            \text{For } \tikzhline[red]{0.9cm} &\equals \tikzhline[black]{0.9cm} \text{ (\refdef{15})}, \\
-            \text{and } \tikzhline[blue]{0.9cm} &\equals \tikzhline[red]{0.9cm} \text{ (const.)}; \\
-            \therefore\, \tikzhline[blue]{0.9cm} &\equals \tikzhline[black]{0.9cm} \text{ (\refax{1})}. 
-        \end{align*}
+        Produce \ad, and \ae, (\refpost{2}), take $\db \equals \ec$, (\refprop{3}); draw \dc and \eb. 
+
+        Then in \ABE and \ADE we have, $\ab \equals \ac$ (const.), \bac common to both, and $\ad \equals \ae$ (hyp.) $\therefore \adc \equals \aeb$, $\dc \equals \eb$ and $\abe \equals \acd$ (\refprop{4}). Again in \DEB and \EDC we have $\db \equals \ec$, $\abe \equals \acd$ and $\dc \equals \eb$, \therefore\ $\edb \equals \dec$ and $\edc \equals \deb$  (\refprop{4}) but $\adc \equals \aeb$, \therefore $\ade \equals \aed$ (\refax{3}). 
 	\end{proof}
