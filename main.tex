@@ -82,17 +82,17 @@
 }
 \newcommand{\tikzsectorabc}[5][fill=black]{
 
-\coordinate (POINTA) at #2;
-\coordinate (POINTB) at #3;
-\coordinate (POINTC) at #4;
+    \coordinate (POINTA) at #2;
+    \coordinate (POINTB) at #3;
+    \coordinate (POINTC) at #4;
 
-\coordinate (POINTP) at ($(POINTA)!#5!(POINTB)$);
+    \coordinate (POINTP) at ($(POINTA)!#5!(POINTB)$);
 
-\path[draw] 
-  let
-  \p1=( $ (POINTA) - (POINTP) $ )
-  in
-  pic[angle radius={veclen(\x1,\y1)},#1] {angle = POINTA--POINTB--POINTC};
+    \path[draw] 
+      let
+      \p1=( $ (POINTA) - (POINTP) $ )
+      in
+      pic[angle radius={veclen(\x1,\y1)},#1] {angle = POINTA--POINTB--POINTC};
 }
 
 

@@ -1,11 +1,15 @@
 	\pagestyle{euclidthm}
+    \newcommand{\coordspec}{
+      \coordinate (A) at (0,5)    ;
+      \coordinate (B) at (-3.5,-2);
+      \coordinate (C) at (3.5,-2) ;
+      \path (A) -- (B) node[coordinate,pos=0.6] (D) {D};
+      \path (A) -- (C) node[coordinate,pos=0.6] (E) {E};
+      \pgfresetboundingbox
+    }
     \begin{figure}[h]
         \begin{tikzpicture}[scale=0.8]
-            \node (A) at (0,5)    {A};
-            \node (B) at (-3.5,-2){B};
-            \node (C) at (3.5,-2) {C};
-            \path (A) -- (B) node[pos=0.6] (D) {D};
-            \path (A) -- (C) node[pos=0.6] (E) {E};
+            \coordspec
             \tikzsectorabc[fill=black]{(B)}{(A)}{(C)}{1cm}
             \tikzsectorabc[fill=blue]{(E)}{(D)}{(A)}{1cm}
             \tikzsectorabc[fill=blue]{(A)}{(E)}{(D)}{1cm}
@@ -20,115 +24,143 @@
     \end{figure}
     \newcommand{\ADE}{
         \begin{tikzpicture}[scale=0.1]
-            \clip (-3.0,-0.2) rectangle (3,5.2);
-            \node[coordinate] (A) at (0,5)    {A};
-            \node[coordinate] (B) at (-3.5,-2){B};
-            \node[coordinate] (C) at (3.5,-2) {C};
-            \path (A) -- (B) node[pos=0.6,coordinate] (D) {D};
-            \path (A) -- (C) node[pos=0.6,coordinate] (E) {E};
+            \coordspec
             \tikztriangle[red][black][red]{(A)}{(D)}{(E)}
+            \pgfresetboundingbox
+            \path (A) -- (D) -- (E) -- cycle;
         \end{tikzpicture}
     }
     \newcommand{\ABE}{
-        \begin{tikzpicture}[scale=0.3]
-            \node (A) at (0,5)    {A};
-            \node (B) at (-3.5,-2){B};
-            \node (C) at (3.5,-2) {C};
-            \path (A) -- (B) node[pos=0.6] (D) {D};
-            \path (A) -- (C) node[pos=0.6] (E) {E};
+        \begin{tikzpicture}[scale=0.2,baseline=-0.5cm]
+            \coordspec
             \tikzsectorabc[fill=black]{(B)}{(A)}{(C)}{0.3cm}
             \tikztriangle[yellow][blue][red]{(A)}{(B)}{(E)}
-            \tikztriangle[yellow][blue][red]{(A)}{(C)}{(D)}
+            \pgfresetboundingbox
+            \path (A) -- (B) -- (E) -- cycle;
+%            \draw[red,ultra thick] (E) -- (A) -- (D);
         \end{tikzpicture}
     }
     \newcommand{\ACD}{
-        \begin{tikzpicture}[scale=0.3]
-            \node (A) at (0,5)    {A};
-            \node (B) at (-3.5,-2){B};
-            \node (C) at (3.5,-2) {C};
-            \path (A) -- (B) node[pos=0.6] (D) {D};
-            \path (A) -- (C) node[pos=0.6] (E) {E};
+        \begin{tikzpicture}[scale=0.2,baseline=-0.5cm]
+            \coordspec
             \tikzsectorabc[fill=black]{(B)}{(A)}{(C)}{0.3cm}
-            \tikztriangle[yellow][blue][red]{(A)}{(B)}{(E)}
             \tikztriangle[yellow][blue][red]{(A)}{(C)}{(D)}
+            \pgfresetboundingbox
+            \path (A) -- (C) -- (D) -- cycle;
+%            \draw[red,ultra thick] (E) -- (A) -- (D);
         \end{tikzpicture}
     }
     \newcommand{\DEB}{
-        \begin{tikzpicture}[scale=0.3]
-            \node (A) at (0,5)    {A};
-            \node (B) at (-3.5,-2){B};
-            \node (C) at (3.5,-2) {C};
-            \path (A) -- (B) node[pos=0.6] (D) {D};
-            \path (A) -- (C) node[pos=0.6] (E) {E};
-            \tikztriangle[yellow][blue][red]{(D)}{(E)}{(B)}
+        \begin{tikzpicture}[scale=0.2]
+            \coordspec
+            \tikztriangle[black][blue][yellow]{(D)}{(E)}{(B)}
+            \pgfresetboundingbox
+            \path (D) -- (E) -- (B) -- cycle;
         \end{tikzpicture}
     }
     \newcommand{\EDC}{
-        \begin{tikzpicture}[scale=0.3]
-            \node (A) at (0,5)    {A};
-            \node (B) at (-3.5,-2){B};
-            \node (C) at (3.5,-2) {C};
-            \path (A) -- (B) node[pos=0.6] (D) {D};
-            \path (A) -- (C) node[pos=0.6] (E) {E};
-            \tikztriangle[yellow][blue][red]{(E)}{(D)}{(C)}
+        \begin{tikzpicture}[scale=0.2]
+            \coordspec
+            \tikztriangle[black][blue][yellow]{(E)}{(D)}{(C)}
+            \pgfresetboundingbox
+            \path (E) -- (D) -- (C) -- cycle;
         \end{tikzpicture}
     }
     \newcommand{\bac}{
-        bac
+      \begin{tikzpicture}
+        \coordspec
+        \tikzsectorabc[fill=black]{(B)}{(A)}{(C)}{0.5cm}
+      \end{tikzpicture}
     }
     \newcommand{\abe}{
-        abe
+      \begin{tikzpicture}
+        \coordspec
+        \tikzsectorabc[fill=red]{(E)}{(B)}{(A)}{0.5cm}
+      \end{tikzpicture}
     }
     \newcommand{\acd}{
-        acd
+      \begin{tikzpicture}
+        \coordspec
+        \tikzsectorabc[fill=red]{(A)}{(C)}{(D)}{0.5cm}
+      \end{tikzpicture}
     }
     \newcommand{\adc}{
-        adc
-    }
-    \newcommand{\ade}{
-        ade
+      \begin{tikzpicture}
+        \coordspec
+        \tikzsectorabc[fill=blue]{(E)}{(D)}{(A)}{0.5cm}
+        \tikzsectorabc[fill=yellow]{(C)}{(D)}{(E)}{0.5cm}
+      \end{tikzpicture}
     }
     \newcommand{\aeb}{
-        aeb
+      \begin{tikzpicture}
+        \coordspec
+        \tikzsectorabc[fill=blue]{(A)}{(E)}{(D)}{0.5cm}
+        \tikzsectorabc[fill=yellow]{(D)}{(E)}{(B)}{0.5cm}
+      \end{tikzpicture}
+    }
+    \newcommand{\ade}{
+      \begin{tikzpicture}
+        \coordspec
+        \tikzsectorabc[fill=blue]{(E)}{(D)}{(A)}{0.5cm}
+      \end{tikzpicture}
     }
     \newcommand{\aed}{
-        aed
-    }
-    \newcommand{\deb}{
-        deb
+      \begin{tikzpicture}
+        \coordspec
+        \tikzsectorabc[fill=blue]{(A)}{(E)}{(D)}{0.5cm}
+      \end{tikzpicture}
     }
     \newcommand{\dec}{
-        dec
-    }
-    \newcommand{\edb}{
-        edb
+      \begin{tikzpicture}
+        \coordspec
+        \tikzsectorabc[fill=white,draw=black]{(B)}{(E)}{(C)}{0.5cm}
+        \draw (E) -- ($(E)!0.5cm!(C)$);
+        \tikzsectorabc[fill=yellow]{(D)}{(E)}{(B)}{0.5cm}
+      \end{tikzpicture}
     }
     \newcommand{\edc}{
-        edc
+      \begin{tikzpicture}
+        \coordspec
+        \tikzsectorabc[fill=yellow]{(C)}{(D)}{(E)}{0.5cm}
+      \end{tikzpicture}
+    }
+    \newcommand{\deb}{
+      \begin{tikzpicture}
+        \coordspec
+        \tikzsectorabc[fill=yellow]{(D)}{(E)}{(B)}{0.5cm}
+      \end{tikzpicture}
+    }
+    \newcommand{\edb}{
+      \begin{tikzpicture}
+        \coordspec
+        \tikzsectorabc[fill=white,draw=black]{(B)}{(D)}{(C)}{0.5cm}
+        \draw (D) -- ($(D)!0.5cm!(B)$);
+        \tikzsectorabc[fill=yellow]{(C)}{(D)}{(E)}{0.5cm}
+      \end{tikzpicture}
     }
     \renewcommand{\ab}{
-        ab
+      \tikzhline[red]{0.5cm}\tikzhline[yellow]{0.5cm}
     }
     \renewcommand{\ac}{
-        ac
+      \tikzhline[red]{0.5cm}\tikzhline[yellow]{0.5cm}
     }
     \newcommand{\ad}{
-        ad
+      \tikzhline[red]{1cm}
     }
     \renewcommand{\ae}{
-        ae
+      \tikzhline[red]{1cm}
     }
     \newcommand{\db}{
-        db
+      \tikzhline[yellow]{1cm}
     }
     \newcommand{\dc}{
-        dc
+      \tikzhline[blue]{1cm}
     }
     \newcommand{\eb}{
-        eb
+      \tikzhline[blue]{1cm}
     }
     \newcommand{\ec}{
-        ec
+      \tikzhline[yellow]{1cm}
     }
 
     
@@ -139,5 +171,5 @@
 	\begin{proof}
         Produce \ad, and \ae, (\refpost{2}), take $\db \equals \ec$, (\refprop{3}); draw \dc and \eb. 
 
-        Then in \ABE and \ADE we have, $\ab \equals \ac$ (const.), \bac common to both, and $\ad \equals \ae$ (hyp.) $\therefore \adc \equals \aeb$, $\dc \equals \eb$ and $\abe \equals \acd$ (\refprop{4}). Again in \DEB and \EDC we have $\db \equals \ec$, $\abe \equals \acd$ and $\dc \equals \eb$, \therefore\ $\edb \equals \dec$ and $\edc \equals \deb$  (\refprop{4}) but $\adc \equals \aeb$, \therefore $\ade \equals \aed$ (\refax{3}). 
+        Then in \ABE and \ACD we have, $\ab \equals \ac$ (const.), \bac common to both, and $\ad \equals \ae$ (hyp.) $\therefore \adc \equals \aeb$, $\dc \equals \eb$ and $\abe \equals \acd$ (\refprop{4}). Again in \DEB and \EDC we have $\db \equals \ec$, $\abe \equals \acd$ and $\dc \equals \eb$, \therefore\ $\edb \equals \dec$ and $\edc \equals \deb$  (\refprop{4}) but $\adc \equals \aeb$, $\therefore \ade \equals \aed$ (\refax{3}). 
 	\end{proof}
