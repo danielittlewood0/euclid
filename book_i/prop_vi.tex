@@ -1,0 +1,228 @@
+	\pagestyle{euclidthm}
+
+    \newcommand{\coordspec}{
+      \coordinate (A) at (0,0)    ;
+      \coordinate (B) at (2,3.5);
+      \coordinate (C) at (4,0) ;
+      \path (A) -- (B) node[coordinate,pos=0.7] (B') {B'};
+      \pgfresetboundingbox
+    }
+
+%%%%%%%%%%
+
+%   \newcommand{\coordspec}{
+%     \coordinate (A) at (0,5)    ;
+%     \coordinate (B) at (-3.5,-2);
+%     \coordinate (C) at (3.5,-2) ;
+%     \path (A) -- (B) node[coordinate,pos=0.6] (D) {D};
+%     \path (A) -- (C) node[coordinate,pos=0.6] (E) {E};
+%     \pgfresetboundingbox
+%   }
+%   \begin{figure}[h]
+%       \begin{tikzpicture}[scale=0.8]
+%           \coordspec
+%           \tikzsectorabc[fill=black]{(B)}{(A)}{(C)}{1cm}
+%           \tikzsectorabc[fill=blue]{(E)}{(D)}{(A)}{1cm}
+%           \tikzsectorabc[fill=blue]{(A)}{(E)}{(D)}{1cm}
+%           \tikzsectorabc[fill=yellow]{(C)}{(D)}{(E)}{1cm}
+%           \tikzsectorabc[fill=yellow]{(D)}{(E)}{(B)}{1cm}
+%           \tikzsectorabc[fill=red]{(E)}{(B)}{(A)}{1cm}
+%           \tikzsectorabc[fill=red]{(A)}{(C)}{(D)}{1cm}
+%           \tikztriangle[yellow][blue][red]{(A)}{(B)}{(E)}
+%           \tikztriangle[yellow][blue][red]{(A)}{(C)}{(D)}
+%           \tikztriangle[red][black][red]{(A)}{(D)}{(E)}
+%       \end{tikzpicture}
+%   \end{figure}
+%   \newcommand{\ADE}{
+%       \begin{tikzpicture}[scale=0.1]
+%           \coordspec
+%           \tikztriangle[red][black][red]{(A)}{(D)}{(E)}
+%           \pgfresetboundingbox
+%           \path (A) -- (D) -- (E) -- cycle;
+%       \end{tikzpicture}
+%   }
+%   \newcommand{\ABE}{
+%       \begin{tikzpicture}[scale=0.2,baseline=-0.5cm]
+%           \coordspec
+%           \tikzsectorabc[fill=black]{(B)}{(A)}{(C)}{0.3cm}
+%           \tikztriangle[yellow][blue][red]{(A)}{(B)}{(E)}
+%           \pgfresetboundingbox
+%           \path (A) -- (B) -- (E) -- cycle;
+%            \draw[red,ultra thick] (E) -- (A) -- (D);
+%       \end{tikzpicture}
+%   }
+%   \newcommand{\ACD}{
+%       \begin{tikzpicture}[scale=0.2,baseline=-0.5cm]
+%           \coordspec
+%           \tikzsectorabc[fill=black]{(B)}{(A)}{(C)}{0.3cm}
+%           \tikztriangle[yellow][blue][red]{(A)}{(C)}{(D)}
+%           \pgfresetboundingbox
+%           \path (A) -- (C) -- (D) -- cycle;
+%            \draw[red,ultra thick] (E) -- (A) -- (D);
+%       \end{tikzpicture}
+%   }
+%   \newcommand{\DEB}{
+%       \begin{tikzpicture}[scale=0.2]
+%           \coordspec
+%           \tikztriangle[black][blue][yellow]{(D)}{(E)}{(B)}
+%           \pgfresetboundingbox
+%           \path (D) -- (E) -- (B) -- cycle;
+%       \end{tikzpicture}
+%   }
+%   \newcommand{\EDC}{
+%       \begin{tikzpicture}[scale=0.2]
+%           \coordspec
+%           \tikztriangle[black][blue][yellow]{(E)}{(D)}{(C)}
+%           \pgfresetboundingbox
+%           \path (E) -- (D) -- (C) -- cycle;
+%       \end{tikzpicture}
+%   }
+%   \newcommand{\bac}{
+%     \begin{tikzpicture}
+%       \coordspec
+%       \tikzsectorabc[fill=black]{(B)}{(A)}{(C)}{0.5cm}
+%     \end{tikzpicture}
+%   }
+%   \newcommand{\abe}{
+%     \begin{tikzpicture}
+%       \coordspec
+%       \tikzsectorabc[fill=red]{(E)}{(B)}{(A)}{0.5cm}
+%     \end{tikzpicture}
+%   }
+%   \newcommand{\acd}{
+%     \begin{tikzpicture}
+%       \coordspec
+%       \tikzsectorabc[fill=red]{(A)}{(C)}{(D)}{0.5cm}
+%     \end{tikzpicture}
+%   }
+%   \newcommand{\adc}{
+%     \begin{tikzpicture}
+%       \coordspec
+%       \tikzsectorabc[fill=blue]{(E)}{(D)}{(A)}{0.5cm}
+%       \tikzsectorabc[fill=yellow]{(C)}{(D)}{(E)}{0.5cm}
+%     \end{tikzpicture}
+%   }
+%   \newcommand{\aeb}{
+%     \begin{tikzpicture}
+%       \coordspec
+%       \tikzsectorabc[fill=blue]{(A)}{(E)}{(D)}{0.5cm}
+%       \tikzsectorabc[fill=yellow]{(D)}{(E)}{(B)}{0.5cm}
+%     \end{tikzpicture}
+%   }
+%   \newcommand{\ade}{
+%     \begin{tikzpicture}
+%       \coordspec
+%       \tikzsectorabc[fill=blue]{(E)}{(D)}{(A)}{0.5cm}
+%     \end{tikzpicture}
+%   }
+%   \newcommand{\aed}{
+%     \begin{tikzpicture}
+%       \coordspec
+%       \tikzsectorabc[fill=blue]{(A)}{(E)}{(D)}{0.5cm}
+%     \end{tikzpicture}
+%   }
+%   \newcommand{\dec}{
+%     \begin{tikzpicture}
+%       \coordspec
+%       \tikzsectorabc[fill=white,draw=black]{(B)}{(E)}{(C)}{0.5cm}
+%       \draw (E) -- ($(E)!0.5cm!(C)$);
+%       \tikzsectorabc[fill=yellow]{(D)}{(E)}{(B)}{0.5cm}
+%     \end{tikzpicture}
+%   }
+%   \newcommand{\edc}{
+%     \begin{tikzpicture}
+%       \coordspec
+%       \tikzsectorabc[fill=yellow]{(C)}{(D)}{(E)}{0.5cm}
+%     \end{tikzpicture}
+%   }
+%   \newcommand{\deb}{
+%     \begin{tikzpicture}
+%       \coordspec
+%       \tikzsectorabc[fill=yellow]{(D)}{(E)}{(B)}{0.5cm}
+%     \end{tikzpicture}
+%   }
+%   \newcommand{\edb}{
+%     \begin{tikzpicture}
+%       \coordspec
+%       \tikzsectorabc[fill=white,draw=black]{(B)}{(D)}{(C)}{0.5cm}
+%       \draw (D) -- ($(D)!0.5cm!(B)$);
+%       \tikzsectorabc[fill=yellow]{(C)}{(D)}{(E)}{0.5cm}
+%     \end{tikzpicture}
+%   }
+%   \renewcommand{\ab}{
+%     \tikzhline[red]{0.5cm}\tikzhline[yellow]{0.5cm}
+%   }
+%   \renewcommand{\ac}{
+%     \tikzhline[red]{0.5cm}\tikzhline[yellow]{0.5cm}
+%   }
+%   \newcommand{\ad}{
+%     \tikzhline[red]{1cm}
+%   }
+%   \renewcommand{\ae}{
+%     \tikzhline[red]{1cm}
+%   }
+%   \newcommand{\db}{
+%     \tikzhline[yellow]{1cm}
+%   }
+%   \newcommand{\dc}{
+%     \tikzhline[blue]{1cm}
+%   }
+%   \newcommand{\eb}{
+%     \tikzhline[blue]{1cm}
+%   }
+%   \newcommand{\ec}{
+%     \tikzhline[yellow]{1cm}
+%   }
+%
+%%   
+  
+ \newcommand{\ABC}{%
+   \begin{tikzpicture}[scale=0.5]
+       \coordspec
+       \tikztriangle[black][blue][red]{(A)}{(B)}{(C)}
+       \pgfresetboundingbox
+       \path[draw=white,densely dashed,very thick] (B') -- (B);
+       \path (A) -- (B) -- (C) -- cycle;
+   \end{tikzpicture}
+ }
+ \newcommand{\ABprimeC}{%
+%
+ }
+ \newcommand{\bac}{%
+%
+ }
+ \newcommand{\bca}{%
+%
+ }
+ \newcommand{\ab }{%
+%
+ }
+ \newcommand{\bc}{%
+%
+ }
+ \newcommand{\ac }{%
+%
+ }
+ \newcommand{\abprime }{%
+%
+ }
+ \newcommand{\bprimec}{%
+%
+ }
+  
+  \begin{prop}{\lettrine[lines=2]{I}n}
+    any triangle (\ABC) if two angles (\bac and \bca) are equal the 
+    sides (\ab and \bc) opposite to them are also equal.
+  \end{prop}
+  \begin{proof}
+    For if the sides be not equal, let one of them \ab be greater than 
+    the other \bc, and from it cut off $\abprime \equals \bc$ 
+    (\refprop{3}), draw \bprimec. 
+
+    Then in \ABprimeC and \ABC, $\abprime \equals \bc$ 
+    (\byconstruction) $\bac \equals \bac$ (\byhypothesis) and \ac 
+    common, \therefore the triangles are equal (\refprop{4}) a part 
+    equal to the whole, which is absurd; \therefore neither of the 
+    sides \ab or \bc is greater than the other, \therefore hence they 
+    are equal. 
+  \end{proof}

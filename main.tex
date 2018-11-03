@@ -105,13 +105,15 @@
 \newcommand{\refdef}[1]{def. \ref{def#1}.}
 \newcommand{\refax}[1]{ax. \ref{ax#1}.}
 \newcommand{\refpost}[1]{post. \ref{post#1}.}
+\newcommand{\byconstruction}{const.}
+\newcommand{\byhypothesis}{hyp.}
 \input{symbols.tex}
 \begin{document}
     %\pagestyle{empty}
     \pagestyle{euclidintro}
     \frontmatter
     \tableofcontents
-    \input{./introduction.tex}
+%   \input{./introduction.tex}
     \newcounter{savepage}
     \setcounter{savepage}{\arabic{page}+1}
     \mainmatter
