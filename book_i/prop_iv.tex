@@ -1,0 +1,70 @@
+	\pagestyle{euclidthm}
+    \begin{figure}[h]
+      \begin{subfigure}{0.35\textwidth}
+        \begin{tikzpicture}[scale=0.8]
+            \coordinate (C) at (0,0);
+            \coordinate (B) at (4,1);
+            \coordinate (A) at (3,4);
+            \tikzsectorabc[fill=red]{(A)}{(B)}{(C)}{0.2}
+            \tikzsectorabc[fill=blue]{(B)}{(C)}{(A)}{0.2}
+            \tikzsectorabc[fill=yellow]{(C)}{(A)}{(B)}{0.2}
+            \tikztriangle[blue][black][red]{(A)}{(B)}{(C)}
+        \end{tikzpicture}
+      \end{subfigure}
+      \begin{subfigure}{0.35\textwidth}
+        \begin{tikzpicture}[scale=0.8]
+            \coordinate (C) at (0,0);
+            \coordinate (B) at (4,1);
+            \coordinate (A) at (3,4);
+            \tikzsectorabc[fill=red]{(A)}{(B)}{(C)}{0.2}
+            \tikzsectorabc[fill=blue]{(B)}{(C)}{(A)}{0.2}
+            \tikzsectorabc[fill=yellow]{(C)}{(A)}{(B)}{0.2}
+            \tikztriangle[blue][black][red]{(A)}{(B)}{(C)}
+        \end{tikzpicture}
+      \end{subfigure}
+    \end{figure}
+
+    \renewcommand{\cab}{
+        \begin{tikzpicture}[scale=0.8]
+            \coordinate (C) at (0,0);
+            \coordinate (B) at (4,1);
+            \coordinate (A) at (3,4);
+            \tikzsectorabc[fill=yellow]{(C)}{(A)}{(B)}{0.2}
+        \end{tikzpicture}
+    }
+    \renewcommand{\abc}{
+        \begin{tikzpicture}[scale=0.8]
+            \coordinate (C) at (0,0);
+            \coordinate (B) at (4,1);
+            \coordinate (A) at (3,4);
+            \tikzsectorabc[fill=red]{(A)}{(B)}{(C)}{0.2}
+        \end{tikzpicture}
+    }
+    \renewcommand{\bca}{
+        \begin{tikzpicture}[scale=0.8]
+            \coordinate (C) at (0,0);
+            \coordinate (B) at (4,1);
+            \coordinate (A) at (3,4);
+            \tikzsectorabc[fill=blue]{(B)}{(C)}{(A)}{0.2}
+        \end{tikzpicture}
+    }
+    \newcommand{\ab}{\tikzhline[red]{0.5cm}}
+    \newcommand{\bc}{\tikzhline[blue]{0.5cm}}
+    \newcommand{\ac}{\tikzhline[black]{0.5cm}}
+    \begin{prop}{\lettrine[lines=2]{I}f}
+      two triangles have two sides of the one respectively equal to two 
+      sides of the other, (\ac to \ac and \ab to \ab) and the angles (\cab 
+      and \cab) contained by those equals sides also equal; then their 
+      bases or their sides (\bc and \bc) are also equal: and the remaining 
+      and their remaining angles opposite to equal sides are respectively 
+      equal ($\bca \equals \bca$ and  $\abc \equals \abc$): and the triangles are equal in 
+      every respect.
+  \end{prop}
+	\begin{proof}
+    Let the two triangles be conceived, to be so placed, that the vertex 
+    of the one of the equal angles, \cab or \cab ; shall fall upon that of 
+    the other, and \ac to coincide with \ac, then will \ac coincide with \ac 
+    is applied: consequently \bc will coincide with \bc, or two straight 
+    lines will enclose a space, which is impossible (\refax{10}), therefore 
+    $\bc = \bc$, 
+	\end{proof}

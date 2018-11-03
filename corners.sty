@@ -1,0 +1,44 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{custom}[2018/07/02 Joined up polygon corners in tikz]
+
+\RequirePackage{tikz,xparse}
+\usetikzlibrary{math,calc,intersections}
+
+\providecommand{\len}{0.8pt}
+\DeclareDocumentCommand{\tikzcorner}{O{black} O{black} m m m}{
+    \coordinate (AAAA) at #3;
+    \coordinate (BBBB) at #4;
+    \coordinate (CCCC) at #5;
+
+\coordinate[rotate around = {90:(AAAA)}] (BBBB') at (BBBB);
+\coordinate[rotate around = {90:(CCCC)}] (BBBB'') at (BBBB);
+\path[name path=upper AAAA,dashed] (AAAA) 
+let \p1 = ($ (AAAA) - (BBBB)$),
+    \p2 = ($ (BBBB') - (AAAA)$)
+in 
+	++ ($(0,0)!\len!(\p2)$) node[coordinate](AAAA'){AAAA'}  --++ ($(\p1)!{3*veclen(\p1)}!(0,0)$);
+\path[name path=lower AAAA,dashed] (AAAA) 
+let \p1 = ($ (AAAA) - (BBBB)$),
+    \p2 = ($ (BBBB') - (AAAA)$)
+in 
+	++ ($(0,0)!-\len!(\p2)$) node[coordinate](AAAA''){AAAA''} --++ ($(\p1)!{3*veclen(\p1)}!(0,0)$);
+\path[name path=upper CCCC,dashed] (CCCC) 
+let \p1 = ($ (CCCC) - (BBBB)$),
+    \p2 = ($ (BBBB'') - (CCCC)$)
+in 
+	++ ($(0,0)!-\len!(\p2)$) node[coordinate](CCCC'){CCCC'} --++ ($(\p1)!{3*veclen(\p1)}!(0,0)$);
+\path[name path=lower CCCC,dashed] (CCCC) 
+let \p1 = ($ (CCCC) - (BBBB)$),
+    \p2 = ($ (BBBB'') - (CCCC)$)
+in 
+++ ($(0,0)!\len!(\p2)$)node[coordinate](CCCC''){CCCC''}  --++ ($(\p1)!{3*veclen(\p1)}!(0,0)$);
+    \path [name intersections={of=upper AAAA and upper CCCC,by=XXXX}] (XXXX) node[coordinate] {XXXX};
+	\path [name intersections={of=lower AAAA and lower CCCC,by=YYYY}] (YYYY) node[coordinate] {YYYY};
+    \path (AAAA')  -- (XXXX) node [pos=0.2,coordinate] (AAAA*) {AAAA*};
+    \path (AAAA'') -- (XXXX) node[pos=0.2,coordinate] (AAAA**) {AAAA**};
+    \path (CCCC')  -- (YYYY) node [pos=0.2,coordinate] (CCCC*) {CCCC*};
+    \path (CCCC'') -- (YYYY) node[pos=0.2,coordinate] (CCCC**) {CCCC**};
+	\fill[#1] (AAAA**) -- (AAAA*) -- (XXXX) -- (YYYY) -- (AAAA**);
+	\fill[#2] (CCCC**) -- (CCCC*) -- (XXXX) -- (YYYY) -- (CCCC**);
+}
+
