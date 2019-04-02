@@ -42,6 +42,22 @@
 
 %%%%%%%%
 
+\newcommand{\euclidthm}[1]{
+  \clearpage
+  \subsection{Proposition \the\numexpr \theprop + 1}
+  \input{#1}
+  \pagestyle{euclidthm}
+}
+
+\newcommand{\euclidprop}[1]{
+  \clearpage
+  \subsection{Proposition \the\numexpr \theprop + 1}
+  \input{#1}
+  \pagestyle{euclidthm}
+}
+
+%%%%%%%%%
+
 \titleformat{\chapter}
 {\centering\normalfont}{Book~\thechapter}{1em}{}
 \titleformat{\section}
