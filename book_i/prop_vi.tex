@@ -1,6 +1,6 @@
 	\pagestyle{euclidthm}
 
-  \newcommand{\coordspec}{
+  \def\coordspec{
     \coordinate (A) at (0,0)    ;
     \coordinate (B) at (2,3.5);
     \coordinate (C) at (4,0) ;
@@ -24,7 +24,7 @@
      \path (A) -- (B) -- (C) -- cycle;
    \end{tikzpicture}
  \end{figure}
- \newcommand{\ABC}{%
+ \def\ABC{%
    \begin{tikzpicture}[scale=0.1]
        \coordspec
        \path[draw=black,thick] (A) -- (B');
@@ -36,7 +36,7 @@
        \path (A) -- (B) -- (C) -- cycle;
    \end{tikzpicture}
  }
- \newcommand{\ABprimeC}{%
+ \def\ABprimeC{%
    \begin{tikzpicture}[scale=0.1]
        \coordspec
        \tikztriangle[black][yellow][red]{(A)}{(B')}{(C)}
@@ -44,34 +44,34 @@
        \path (A) -- (B') -- (C) -- cycle;
    \end{tikzpicture}
  }
- \newcommand{\bac}{%
+ \def\bac{%
    \begin{tikzpicture}[scale=0.1]
      \coordspec
      \tikzsectorabc[fill=yellow]{(C)}{(A)}{(B)}{0.5cm}
    \end{tikzpicture}
  }
- \newcommand{\bca}{%
+ \def\bca{%
    \begin{tikzpicture}[scale=0.5]
      \coordspec
      \tikzsectorabc[fill=black]{(B)}{(C)}{(A)}{0.5cm}
    \end{tikzpicture}
  }
- \newcommand{\ab}{%
+ \def\ab{%
    \begin{tikzpicture}[baseline=-0.5ex]
      \draw[ultra thick] (0,0) -- (0.7,0);
      \draw[ultra thick,densely dashed] (0.7,0) -- (1,0);
    \end{tikzpicture}
  }
- \newcommand{\bc}{%
+ \def\bc{%
    \tikzhline[blue]{1cm}
  }
- \newcommand{\ac }{%
+ \def\ac {%
    \tikzhline[red]{1cm}
  }
- \newcommand{\abprime}{%
+ \def\abprime{%
    \tikzhline[black]{1cm}
  }
- \newcommand{\bprimec}{%
+ \def\bprimec{%
    \tikzhline[yellow]{1cm}
  }
   

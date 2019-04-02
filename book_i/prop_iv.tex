@@ -24,7 +24,7 @@
       \end{subfigure}
     \end{figure}
 
-    \renewcommand{\cab}{
+    \def\cab{
         \begin{tikzpicture}[scale=0.8]
             \coordinate (C) at (0,0);
             \coordinate (B) at (4,1);
@@ -32,7 +32,7 @@
             \tikzsectorabc[fill=yellow]{(C)}{(A)}{(B)}{0.2}
         \end{tikzpicture}
     }
-    \renewcommand{\abc}{
+    \def\abc{
         \begin{tikzpicture}[scale=0.8]
             \coordinate (C) at (0,0);
             \coordinate (B) at (4,1);
@@ -40,7 +40,7 @@
             \tikzsectorabc[fill=red]{(A)}{(B)}{(C)}{0.2}
         \end{tikzpicture}
     }
-    \renewcommand{\bca}{
+    \def\bca{
         \begin{tikzpicture}[scale=0.8]
             \coordinate (C) at (0,0);
             \coordinate (B) at (4,1);
@@ -48,9 +48,9 @@
             \tikzsectorabc[fill=blue]{(B)}{(C)}{(A)}{0.2}
         \end{tikzpicture}
     }
-    \newcommand{\ab}{\tikzhline[red]{0.5cm}}
-    \newcommand{\bc}{\tikzhline[blue]{0.5cm}}
-    \newcommand{\ac}{\tikzhline[black]{0.5cm}}
+    \def\ab{\tikzhline[red]{0.5cm}}
+    \def\bc{\tikzhline[blue]{0.5cm}}
+    \def\ac{\tikzhline[black]{0.5cm}}
     \begin{prop}{\lettrine[lines=2]{I}f}
       two triangles have two sides of the one respectively equal to two 
       sides of the other, (\ac to \ac and \ab to \ab) and the angles (\cab 
