@@ -18,6 +18,7 @@
 \def\ad{\tikzhline[red]{1cm}}
 \def\bc{\tikzhline[blue]{1cm}}
 \def\bd{\tikzhline[blue]{1cm}}
+\def\cd{\tikzhline[black,dashed]{1cm}}
 
 \def\ac{\tikzhline[red]{1cm}}
 \def\ac{\tikzhline[red]{1cm}}
@@ -47,11 +48,40 @@
    \tikzsectorabc[fill=blue]{(A)}{(D)}{(C)}{0.5cm}
  \end{tikzpicture}
 }
+\def\dca{dca} 
+\def\cda{cda}
+\def\bcd{bcd} 
+\def\bdc{cda} 
 
 \begin{prop}{\lettrine[lines=2]{O}n}
-  the same base (\ab)
+  the same base (\ab), and on the same side of it there cannot
+  be two triangles having their counterminous sides (\ac\ and
+  \ad, \bc\ and \bd) at both extremities of the base, equal to
+  each other.
 \end{prop}
 \begin{proof}
+  When two triangles stand on the same base, and on the same
+  side of it, the vertex of the one shall either fall outside
+  of the other triangle, or within it; or lastly, on one of its
+  sides. 
 
+  If it be possible let the two triangles be constructed so that 
+  DIAGRAM,
+  then draw (\cd) and, 
+
+
+
+\begin{align*}
+  \dca &\equals \cda (\refprop{5}) \\
+  \therefore \bcd &\less \cda \\
+  \text{which is absurd,}
+  \begin{cases}
+    \therefore \bcd &\less \bdc \\
+   %but (\refprop{5]) 
+    \bcd &\equals \bdc 
+  \end{cases}
+\end{align*}
+therefore the two triangles cannot have their counterminous sides equal at both
+  extremities of the base. 
 \end{proof}
 
