@@ -1,0 +1,57 @@
+\def\coordspec{
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (5,0);
+  \coordinate (C) at (2,4);
+  \coordinate (D) at (3,4);
+  \pgfresetboundingbox
+}
+
+\begin{figure}
+  \begin{tikzpicture}
+  \coordspec
+    \draw (A) -- (B);
+  \end{tikzpicture}
+\end{figure}
+
+\def\ab{\tikzhline[black]{1cm}}
+\def\ac{\tikzhline[red]{1cm}}
+\def\ad{\tikzhline[red]{1cm}}
+\def\bc{\tikzhline[blue]{1cm}}
+\def\bd{\tikzhline[blue]{1cm}}
+
+\def\ac{\tikzhline[red]{1cm}}
+\def\ac{\tikzhline[red]{1cm}}
+\def\ac{\tikzhline[red]{1cm}}
+\def\ac{\tikzhline[red]{1cm}}
+\def\bca{%
+ \begin{tikzpicture}[scale=0.1]
+   \coordspec
+   \tikzsectorabc[fill=black]{(B)}{(C)}{(A)}{0.5cm}
+ \end{tikzpicture}
+}
+\def\dcb{%
+ \begin{tikzpicture}[scale=0.1]
+   \coordspec
+   \tikzsectorabc[fill=red]{(D)}{(C)}{(B)}{0.5cm}
+ \end{tikzpicture}
+}
+\def\bda{%
+ \begin{tikzpicture}[scale=0.1]
+   \coordspec
+   \tikzsectorabc[fill=yellow]{(B)}{(D)}{(A)}{0.5cm}
+ \end{tikzpicture}
+}
+\def\adc{%
+ \begin{tikzpicture}[scale=0.1]
+   \coordspec
+   \tikzsectorabc[fill=blue]{(A)}{(D)}{(C)}{0.5cm}
+ \end{tikzpicture}
+}
+
+\begin{prop}{\lettrine[lines=2]{O}n}
+  the same base (\ab)
+\end{prop}
+\begin{proof}
+
+\end{proof}
+
